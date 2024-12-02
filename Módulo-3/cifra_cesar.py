@@ -9,25 +9,54 @@ codigo="bcdefghijklmnopqrstuvwxyza"
 def menu():
     """
     Função para ler a opção do utilizador e executar a função adequada: codificar ou
-    descodificar
-    """
-    opção=input("Indique se quer (c)odificar ou (d)escodificar: ")
-    if opção == "c":
+    descodificar"""
+    pergunta=input("Deseja (C)odificar ou (D)escodificar")
+    if pergunta == "C":
+
         
     pass
 
 def codifica(mensagem:str)->str:
-   """
-   Função que recebe uma mensagem e devolve a mesma codificada de acordo com os alfabetos
-   fornecidos"""
-   pass
+    """
+    Função que recebe uma mensagem e devolve a mesma codificada de acordo com os alfabetos
+    fornecidos"""
+
+    global original
+    global codigo
+    texto=""
+    mensagem = mensagem.lower()
+    for l in mensagem:
+        if l not in original:
+            #caso n encontre a letra no alfabeto deve manter a letra original
+            texto=texto + l
+        else:
+            for p in range(len(original)):
+                if l == original[p]:
+                    texto=texto+codigo[p]
+        
+    return texto
+   
 def descodifica(mensagem_codificada:str)->str:
     """
     Função que recebe uma mensagem codificada e devolve a mesma descodificada de acordo com os
     alfabetos fornecidos"""
+
+    global original
+    global codigo
+    texto=""
+    mensagem = mensagem.lower()
+    for l in mensagem:
+        if l not in codigo:
+            #caso n encontre a letra no alfabeto deve manter a letra original
+            texto=texto + l
+        else:
+            for p in range(len(codigo)):
+                if l == codigo[p]:
+                    texto=texto+original[p]
     pass
 def main():
     menu()
 
 if __name__=="__main__":
     main()
+    
