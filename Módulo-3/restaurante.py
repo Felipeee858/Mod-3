@@ -46,7 +46,7 @@ def Saída_Mesas(n_atual_mesas):
     if n_atual_mesas==0:
         print("Não tem mesas ocupadas.")
         return 0
-    n_mesas=utils.ler_numero_inteiro_limites(1,n_atual_mesas,"Quantas mesasl ficaram desocupadas: ")
+    n_mesas=utils.ler_numero_inteiro_limites(1,n_atual_mesas,"Quantas ficaram desocupadas: ")
     return n_mesas
 
     
@@ -60,7 +60,6 @@ def Estado(mesas_max,clientes_max,n_atual_clientes,n_atual_mesas,tcusto_refeiç�
     print(f"Já recebeu {tcusto_refeição}€ das refeições servidas")
     
     
-
 
 
 
