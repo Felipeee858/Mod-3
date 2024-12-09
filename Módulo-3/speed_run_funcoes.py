@@ -19,9 +19,9 @@ def calcular_fatorial(numero):
     """Recebe um número inteiro positivo e retorna o seu fatorial.
 	    Fatorial de 5 (5!) = 5 * 4 * 3 * 2 * 1
 	"""
-    Fatorial=None
-    for i in range(numero,-1):
-        Fatorial=Fatorial+"*"+i
+    Fatorial=1
+    for nº in range(1,numero+1):
+        Fatorial=Fatorial *nº
     return Fatorial
 
 
@@ -56,9 +56,15 @@ def inverter_string(texto):
     Exemplo: "python" -> "nohtyp"
     """
     mensagem=""
-    for i in range(len(texto),-1):
-        mensagem=mensagem+len[texto]
+    for i in range(len(texto),-1,-1,-1):
+        mensagem=mensagem+texto[i]
     return mensagem
+                #ou
+    """
+    texto_invertido=""
+    for letra in texto:
+        texto_invertido=letra + texto_invertido
+    return texto_invertido2"""
 
 
 
@@ -75,11 +81,13 @@ def calcular_perimetro_circulo(raio):
     #2 π r ‍
     pi=3.14159
     perímetro=2*pi*raio
-    return raio
+    return perímetro
 
 def converter_segundos_para_minutos(segundos):
     """Recebe um valor em segundos e retorna o correspondente em minutos."""
-    minutos=segundos/60
+    minutos=segundos//60
+    #segundos restam=segundos%60
+    #return f"{minutos}:{segundos_restam}
     return minutos
 
 def gerar_saudacao_periodo():
@@ -91,24 +99,23 @@ def gerar_saudacao_periodo():
     """
     import datetime
     #datetime.datetime.now())
-    data=datetime.datetime.now()
-    if data >=6 and data <12:
+    data=datetime.datetime.now().hour
+    if data <12:
         mensagem="Bom dia!"
         return mensagem
     elif data >= 12 and data <=18:
         mensagem="Boa tarde!"
         return mensagem
-    elif data > 18 and data<6:
+    elif data > 18:
         print("Boa noite!")
 
 	
 
 def calcular_desconto(preco, percentual):
     """Recebe um preço e um percentual de desconto e retorna o preço com desconto."""
-    preço_t=1
-    preço_desconto=preco*percentual
-    preço_descontado=preço_t-preço_desconto
-    return preço_descontado
+    percentagem=100-percentual
+    preço_desconto=preco*percentagem/100
+    return preço_desconto
     
 def calcular_velocidade_media(distancia, tempo):
     """Recebe a distância percorrida e o tempo gasto e retorna a velocidade média."""
@@ -121,11 +128,6 @@ def verificar_palindromo(palavra):
     Palíndromo é uma palavra que pode ser lida igual de trás para frente.
     Exemplo: "radar" é um palíndromo.
     """
-    for i in range(len(palavra),-1):
-        if palavra ==i:
-           mensagem=True
-           return mensagem
-        else:
-           mensagem=False
-           return mensagem
-        
+    resultado=palavra==inverter_string(palavra)
+    return resultado
+    
