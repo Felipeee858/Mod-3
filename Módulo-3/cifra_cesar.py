@@ -12,6 +12,11 @@ def menu():
     descodificar"""
     pergunta=input("Deseja (C)odificar ou (D)escodificar")
     if pergunta == "C":
+        codifica()
+    elif pergunta=="D":
+        descodifica()
+    else:
+        print("Erro")
 
         
     pass

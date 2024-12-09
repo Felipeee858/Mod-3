@@ -1,4 +1,4 @@
-frase=input("")
+frase=input("Introduza a frase: ")
 alfabeto="abcdefghijklmnopqrstuvwxyz"
 for i in alfabeto:
     contar=0
