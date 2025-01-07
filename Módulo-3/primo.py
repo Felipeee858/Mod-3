@@ -13,3 +13,13 @@ def Primo(n) -> bool:
         return(primo)
     else:
         return(primo)
+    
+n=int(input("Introduza"))
+print(Primo(n))
+
+
+"""
+def Primo(n) - >bool:
+    primo =True
+    if n %
+"""

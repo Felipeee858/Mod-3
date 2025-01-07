@@ -13,10 +13,13 @@ def main():
     nºinteiro=int(input("Introduza o nº: "))
     soma_quadrados(nºinteiro)
     print(soma_quadrados(nºinteiro))
+
+
+
 if __name__=="__main__":
     main()
 
-    #OU
+#OU
 
 """
 import quadrado^2
