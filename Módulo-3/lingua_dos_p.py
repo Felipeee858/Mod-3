@@ -33,3 +33,11 @@ def ConverteSilaba(silaba):
 
 def Converte(palavra:str) -> str:
     """Função que converte uma palavra na lingua dos P"""
+    converte=""
+    for i in range(len(palavra)):
+        if E_Vogal(palavra[i])==False and i >0:
+            #converter a silaba
+            pass
+        else:
+            converte=converte+palavra[i]
+
