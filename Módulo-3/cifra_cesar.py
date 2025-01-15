@@ -10,6 +10,7 @@ def menu():
     """
     Função para ler a opção do utilizador e executar a função adequada: codificar ou
     descodificar"""
+    
     pergunta=input("Deseja (C)odificar ou (D)escodificar")
     if pergunta == "C":
         codifica()
@@ -19,7 +20,6 @@ def menu():
         print("Erro")
 
         
-    pass
 
 def codifica(mensagem:str)->str:
     """
